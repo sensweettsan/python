@@ -14,5 +14,4 @@ elif media < 5:
     print('Reprovado')
 else:
     print('Reprovado')
-
-
+    
