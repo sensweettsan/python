@@ -1,15 +1,17 @@
-
-nome = input('Digite seu nome:')
-sexo = input('Digite seu sexo:')
-altura = float(input('Digite sua altura: '))
-
-if sexo == "Masculino":
-    print('Seu peso ideal é: ',round((72.7*altura)-58,2))
-elif sexo == "Feminino":
-    print('Seu peso ideal é: ', round((62.1*altura)-44.7,2))
+try:
+  nome = input('Digite seu nome:')
+  sexo = input('Digite seu sexo:')
+  altura = float(input('Digite sua altura: '))
+except Exception as e:
+    print('Houve algum erro', e)
+else:
+  if sexo == "Masculino":
+      print('Seu peso ideal é: ',round((72.7*altura)-58,2))
+  elif sexo == "Feminino":
+      print('Seu peso ideal é: ', round((62.1*altura)-44.7,2))
     
     
-#############################################################
+
 #correção da atividade pelo wisner
 #altura = float(input("Digite a altura: "))
 #sexo = input('Digite o sexo ')
@@ -24,7 +26,7 @@ elif sexo == "Feminino":
   #  print("O sexo informado foi: ", sexo.upper())
 #    print("Seu peso idael é: ",round(pesoIdeal,2))
 
-#############################################################################
+
 peso = float(input('Digite o peso recebido: '))
 imc = round(peso/(altura**2),1)
 
