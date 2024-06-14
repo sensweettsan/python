@@ -25,3 +25,20 @@ elif sexo == "Feminino":
 #    print("Seu peso idael é: ",round(pesoIdeal,2))
 
 #############################################################################
+peso = float(input('Digite o peso recebido: '))
+imc = round(peso/(altura**2),1)
+
+if imc <= 18.5:
+    print('Você está abaixo do peso')
+elif imc <= 18.5:
+    print('Você está com o peso normal')
+elif imc <= 25: 
+    print('Você está Sobrepeso')
+elif imc <= 30:
+    print('Você está com Obesidade grau 1')
+elif imc <= 35:
+     print('Você está com Obesidade grau 2')
+elif imc >= 40:
+     print('Você está com Obesidade grau 3')
+
+
