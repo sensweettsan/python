@@ -1,25 +1,15 @@
-import math
+a = int(input('Digite o valor de a:'))
+b = int(input('Digite o valor de b:'))
+c = int(input('Digite o valor de c:'))
 
-# Lê os coeficientes a, b e c
-a = float(input("Digite o coeficiente a: "))
-b = float(input("Digite o coeficiente b: "))
-c = float(input("Digite o coeficiente c: "))
+delta = b*b - 4*a*b*c # outra forma de elevar o numero de b**2
 
-# Verifica se é uma equação de segundo grau (a != 0)
-if a == 0:
-    print("Não é equação do segundo grau.")
+if delta < 0:
+    print(f"Delta: {delta} - Não há raízes")
+elif delta == 0:
+    print(f'Delta: {delta} - Não é equação do segundo grau')
 else:
-    # Calcula o discriminante
-    delta = b**2 - 4 * a * c
-    
-    # Verifica o valor do discriminante
-    if delta < 0:
-        print("Não há raízes reais para esta equação.")
-    else:
-        # Calcula as raízes
-        raiz_delta = math.sqrt(delta)
-        x1 = (-b + raiz_delta) / (2 * a)
-        x2 = (-b - raiz_delta) / (2 * a)
-        
-        # Imprime as raízes
-        print(f"As raízes da equação são: x1 = {x1:.2f} e x2 = {x2:.2f}")
+    raiz1 = (-b + (delta**0.5)) / 2*a
+    raiz2 = (-b - (delta**0.5)) / 2*a
+
+    print(f'Delta: {delta} - raiz 1: {raiz1}, raiz2: {raiz1}')
